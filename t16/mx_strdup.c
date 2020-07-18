@@ -1,21 +1,20 @@
-#include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
 
-int mx_strlen(const char *s);
-char *mx_strnew(const int size);
 char *mx_strcpy(char *dst, const char *src);
+char *mx_strnew(const int size);
+int mx_strlen(const char *s);
 
 char *mx_strdup(const char *str) {
 
-    char *pdupstr = mx_strnew(mx_strlen(str));
-    mx_strcpy(pdupstr, str);
+	char *duplicate = NULL;
 
-    return pdupstr;
+	if (!(duplicate = mx_strnew(mx_strlen(str))))
+		return NULL;
+
+	if (!mx_strcpy(duplicate, str))
+		return NULL;
+
+	return duplicate;
 }
-
-//int main(void) {
-//    char str1[] = "This is a long message";
-//    char *pstr = NULL;
-//    pstr = mx_strdup(str1);
-//    printf("%s", pstr);
-//}

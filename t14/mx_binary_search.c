@@ -25,12 +25,3 @@ int mx_binary_search(char **arr, int size, const char *s, int *count) {
     *count = 0;
     return -1;
 }
-
-//int main() {
-//    char* arr[] = {"222", "Abcd", "aBc", "ab", "az", "z"};
-//    int count = 0;
-//
-//    int x = mx_binary_search(arr, 6, "ab", &count);
-//    printf("position of string in array: %d\n", x);
-//    printf("Number of iterations: %d\n", count);
-//}

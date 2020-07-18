@@ -1,24 +1,17 @@
-#include <stdio.h>
 #include <stdlib.h>
-#include <stddef.h>
+#include <stdio.h>
+#include <string.h>
 
 char *mx_strnew(const int size) {
 
-    if (size > 0) {
+	char *str = NULL;
+	int i = 0;
 
-        char *p = malloc(sizeof(char) * size + 1);
+	if (size < 0 || !(str = (char *)malloc((size + 1) * sizeof(char))))
+		return NULL;
+	        
+	while (i < size + 1) 
+		str[i++] = '\0';
 
-        for (int i = 0; i < size + 1; i++) {
-            p[i] = '\0';
-        }
-
-        return p;
-    }
-
-    return NULL;
+	return str;
 }
-
-//int main(void) {
-//    char *p = mx_strnew(10);
-//    printf("%s", p);
-//}

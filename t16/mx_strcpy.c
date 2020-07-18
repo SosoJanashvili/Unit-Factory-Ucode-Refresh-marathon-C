@@ -1,5 +1,12 @@
-
 char *mx_strcpy(char *dst, const char *src) {
-    for (int i = 0; (dst[i] = src[i]) != '\0'; i++);
-    return dst;
+	int count = 0;
+
+	while (src[count]) {
+		dst[count] = src[count];
+		count++;
+	}
+
+	dst[count] = '\0';
+	
+	return dst;
 }

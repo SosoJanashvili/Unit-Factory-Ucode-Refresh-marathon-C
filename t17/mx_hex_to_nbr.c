@@ -47,9 +47,3 @@ unsigned long mx_hex_to_nbr(const char *hex) {
 
     return sum;
 }
-
-//int main(void) {
-//    printf("%lu\n", mx_hex_to_nbr("C4"));
-//    printf("%lu\n", mx_hex_to_nbr("FADE"));
-//    printf("%lu\n", mx_hex_to_nbr("ffffffffffff"));
-//}
